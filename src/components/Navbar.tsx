@@ -14,10 +14,10 @@ const Navbar = async () => {
     const NavCategories: InavData[] = await res.json()
     console.log(NavCategories, "nav")
     return (
-        <div className="shadow-sm mt-10">
+        <div className="gap-3 shadow-sm mt-10">
 
-            <div className="flex justify-center items-start gap-2">
-                
+            <div className="flex text-3xl bg-base-300 justify-center items-end gap-5 mx-auto">
+              
                     {
                         NavCategories.map(nc => <Link href={'#'} key={nc.id}>
                             <div >
