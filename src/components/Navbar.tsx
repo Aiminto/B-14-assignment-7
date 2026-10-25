@@ -20,7 +20,7 @@ const Navbar = async () => {
               
                     {
                         NavCategories.map(nc => <Link href={'#'} key={nc.id}>
-                            <div >
+                            <div className="flex gap-5 justify-center mt-5" >
                                 <p>{nc.icon}{nc.nameBn}</p>
                             </div>
                         </Link>)

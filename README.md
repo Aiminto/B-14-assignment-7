@@ -1,5 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+technology use:
+better auth: npm install better-auth
+MongoDB Adapter: npm install @better-auth/mongo-adapter
+MongoDB: npm install mongodb
+fist of sign in then usesession ta dorte habe
 ## Getting Started
 
 First, run the development server:

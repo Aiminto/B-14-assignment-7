@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
+import UserInfo from "./UserInfo";
 
 
 const Header = () => {
@@ -18,10 +19,7 @@ const Header = () => {
                         <p>{date}</p>
                     </div>
                 </div>
-                <div className="flex gap-2.5">
-                    <button className="btn bg-[#16A34A]">সাইন ইন</button>
-                    <button className="btn ">সাইন আপ</button>
-                </div>
+               <UserInfo></UserInfo>
 
             </header>
 
