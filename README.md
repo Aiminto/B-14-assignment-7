@@ -3,6 +3,10 @@ better auth: npm install better-auth
 MongoDB Adapter: npm install @better-auth/mongo-adapter
 MongoDB: npm install mongodb
 fist of sign in then usesession ta dorte habe
+
+# toaster download
+
+#npm install react-hot-toast
 ## Getting Started
 
 First, run the development server:

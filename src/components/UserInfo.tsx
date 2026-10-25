@@ -19,9 +19,9 @@ const UserInfo = () => {
                 user ? (<div>
 
                     <div className="flex flex-col items-center gap-2">
-                        <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
+                        <Link href={"/profile"}><div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
                             <img alt="image" src={user?.image as string} />
-                        </div>
+                        </div></Link>
 
                         <h2>{user?.name}</h2>
                         <p>{user?.email}</p>

@@ -1,6 +1,7 @@
 "use client"
 
 import { authClient } from "@/lib/auth-client";
+import toast from "react-hot-toast";
 
 const SignInPage = () => {
 
@@ -14,14 +15,43 @@ const SignInPage = () => {
             callbackURL:"/"
         })
         if(data){
+            toast.success("Signin in successfully", {
+                style: {
+                    background: "#333",
+                    color: "#fff",
+                    padding: "16px",
+                    borderRadius: "8px",
+                    textAlign: "center",
+                },
+            })
             console.log(data)
         }
 
         if(error){
+            toast.error(error.message as string)
             console.log(error)
         }
 
 
+    }
+
+    const handleGoogleSignin = async()=>{
+
+          
+        const data = await authClient.signIn.social({
+            provider: "google",
+        })
+
+        console.log(data)
+
+
+    }
+
+
+    const handleGithubSign = async()=>{
+        const data = await authClient.signIn.social({
+            provider:"github",
+        })
     }
 
 
@@ -39,6 +69,9 @@ const SignInPage = () => {
                     <button className="btn bg-[#16A34A] mt-4 font-bold text-2xl">সাইন ইন</button>
                 </fieldset>
             </form>
+
+            <button onClick={handleGoogleSignin} className="btn btn-success mt-3 p-2">SignIn with Google</button>
+            <button onClick={handleGithubSign}  className=" btn btn-active mt-2 p-2">SignIn with Github</button>
         </div>
     );
 };
