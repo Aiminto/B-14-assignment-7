@@ -1,38 +1,7 @@
 import { authClient } from "@/lib/auth-client";
-import { redirect } from "next/navigation";
 import toast from "react-hot-toast";
 
 const UpdateProfilePage = () => {
-
-    const handleSubmitForm = async (e: React.SubmitEvent<HTMLElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.target)
-        const user = Object.fromEntries(formData.entries()) as { name: string, email: string, image: string, password: string }
-        console.log(user, "user data")
-        const { data, error
-        } = await authClient.signUp.email({
-            ...user,
-            callbackURL: "/",
-
-        })
-        if (data) {
-            toast.success('Signup successfully',
-                {
-                    style: {
-                        background: "#333",
-                        color: "#fff",
-                        padding: "16px",
-                        borderRadius: "8px",
-                        textAlign: "center",
-                    }
-                });
-            redirect("/");
-        }
-        if (error) {
-            toast.error(error.message as string)
-        }
-
-    }
 
     const handleUpdateProfile = async (e: React.SubmitEvent<HTMLElement>) => {
         e.preventDefault();

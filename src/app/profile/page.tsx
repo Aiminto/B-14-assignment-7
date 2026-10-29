@@ -17,11 +17,6 @@ const ProfilePage = () => {
         setShow(!show)
     }
 
-
-
-
-
-
     return (
         <div className=" flex flex-1 items-center mt-10">
 
